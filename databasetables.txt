@@ -1,0 +1,2 @@
+table Session; {uidS,FullName,Email,Password,Role,Poste,StatusSession,CreatedAt,UpdatedAt}.
+table Tickets; {uidT,OpenBy,SendTo,Description,StatusTicket,CreatedAt,UpdatedAt}.
