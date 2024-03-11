@@ -1,13 +1,6 @@
-const express = require('express')
-const cors = require('cors')
+require('dotenv').config();
+const http = require('http');
+const app = require('./index');
 
-const app = express()
-
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-
-const PORT = process.env.PORT || 3000
-
-app.listen(PORT, () => {
-    console.log(`!!! ${PORT} Yalla Go ${PORT} !!!`)
-})
+const server = http.createServer(app);
+server.listen(process.env.PORT);
